@@ -34,7 +34,7 @@
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
-#<src>                                    <mnt_point>    <type>    <mnt_flags and options>    <fs_mgr_flags>
+#<src>                                   <mnt_point>       <type>    <mnt_flags and options>    <fs_mgr_flags>
 /dev/block/mmcblk0boot0                  /spl                emmc    defaults    defaults
 /dev/block/mmcblk0boot1                  /spl_bk             emmc    defaults    defaults
 /dev/block/by-name/uboot                 /uboot              emmc    defaults    defaults
@@ -44,6 +44,11 @@
 /dev/block/by-name/vbmeta                /vbmeta             emmc    defaults    defaults
 /dev/block/by-name/vbmeta_system         /vbmeta_system      emmc    defaults    defaults
 /dev/block/by-name/vbmeta_vendor         /vbmeta_vendor      emmc    defaults    defaults
+/dev/block/by-name/vbmeta_product        /vbmeta_product     emmc    defaults    defaults
+/dev/block/by-name/vbmeta_system_ext     /vbmeta_system_ext  emmc    defaults    defaults
+
+
+
 /dev/block/by-name/dtbo                  /dtbo               emmc    defaults    defaults
 
 /dev/block/by-name/l_ldsp                /ltedsp             emmc    defaults    defaults
@@ -54,13 +59,14 @@
 /dev/block/by-name/l_fixnv1              /ltefixnv1          emmc    defaults    defaults
 /dev/block/by-name/l_fixnv2              /ltefixnv2          emmc    defaults    defaults
 /dev/block/by-name/l_deltanv             /ltedeltanv         emmc    defaults    defaults
+/dev/block/by-name/lteruntimenv1         /lteruntimenv1      emmc    defaults    defaults
+/dev/block/by-name/lteruntimenv2         /lteruntimenv2      emmc    defaults    defaults
 /dev/block/by-name/wcnmodem              /wcnmodem           emmc    defaults    defaults
 /dev/block/by-name/gnssmodem             /gnssmodem          emmc    defaults    defaults
 /dev/block/by-name/pm_sys                /pmsys              emmc    defaults    defaults
 
 /dev/block/by-name/misc                  /misc               emmc    defaults    defaults
 /dev/block/by-name/boot                  /boot               emmc    defaults    defaults
-/dev/block/by-name/recovery              /recovery           emmc    defaults    defaults
 /dev/block/by-name/persist               /persist            emmc    defaults    defaults
 /dev/block/by-name/logo                  /logo               emmc    defaults    defaults
 /dev/block/by-name/fbootlogo             /fbootlogo          emmc    defaults    defaults
